@@ -1,3 +1,5 @@
+Private fork for my own keyboards. Removed everything I didn't use. Will create new repo that just have my files and has tmk_core as submodule later... perhaps...
+
 TMK Keyboard Firmware Collection
 ================================
 This repository includes keyboard and converter firmware projects built with [`tmk_core`][tmk_core] keyboard library.
