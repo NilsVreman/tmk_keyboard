@@ -57,54 +57,54 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		),
 	/* 1: symbols and nav
      * ,-------------------------------------------------.
-     * |    §|  !|  "|  #|  ¤|  %|  /|  (|  )|  \|  ?|  ^|
+     * |Esc  |  !|  "|  #|  ¤|  %|  /|  (|  )|  \|  ?|  ^|
      * |-------------------------------------------------|
-     * |L1   |   |  @|  £|  $|  &|Lft| Up|Dwn|Rht|  ~|  '|
+     * |L1   |  §|  @|  £|  $|  &|Lft| Up|Dwn|Rht|  ~|  '|
      * |-------------------------------------------------|
      * |Shft |  ||   |  `|  ´|  ¨|  [|  {|  }|  ]|   |   |
-     * |---------------------------------------------|Ent|
-     * |Ctrl |Win| L3 |Alt|  L2| Space |  L1|Del|Bspc|   |
+     * |---------------------------------------------|Del|
+     * |Ctrl |Win| L3 |Alt|  L2|  Bspc |  L1|Del|Bspc|   |
      * `-------------------------------------------------'
      */
 	KEYMAP(
-		 GRV,  FN6,  FN7,  FN9, FN11, FN13, FN16, FN18, FN20, FN25, FN24, FN27,
-		TRNS,   NO,  FN8, FN10, FN12, FN15, LEFT, DOWN,   UP, RGHT, FN28, NUHS,
-		TRNS, FN31,   NO, FN26,  EQL, RBRC, FN19, FN17, FN23, FN21,   NO, TRNS,
-		TRNS, TRNS, TRNS, TRNS, TRNS,       TRNS,       TRNS, TRNS, TRNS
+		 ESC,  FN6,  FN7,  FN9, FN11, FN13, FN16, FN18, FN20, FN25, FN24, FN27,
+		 FN0,  GRV,  FN8, FN10, FN12, FN15, LEFT, DOWN,   UP, RGHT, FN28, NUHS,
+		LSFT, FN31,   NO, FN26,  EQL, RBRC, FN19, FN17, FN23, FN21,   NO,  DEL,
+		LCTL, LGUI,  FN2, LALT,  FN1,       BSPC,        FN0,  DEL, BSPC
 		),
-	/* 2: numerals and mouse helper
+	/* 2: numpad, f-keys and large scale movement
      * ,-------------------------------------------------.
-     * |Esc  |PgU| Up|PgD|Hom|Bsp|  =|  7|  8|  9|  +|  -|
+     * |Esc  | F1| F2| F3| F4| F5|  7|  8|  9|  =|  +|  -|
      * |-------------------------------------------------|
-     * |Alt  |Lft|Dwn|Rht|End|Del|  <|  4|  5|  6|  *|  /|
+     * |Alt  |Hom|PgU|PgD|End|F11|  4|  5|  6|  ^|  /|  *|
      * |-------------------------------------------------|
-     * |Shft |   |   |   |   |Ent|  >|  1|  2|  3|  ^|   |
+     * |Shft | F6| F7| F8| F9|F10|  1|  2|  3|  <|  >|   |
      * |---------------------------------------------|Ent|
-     * |Ctrl |Win| L3 |Alt|  L2|   0   |   ,|  .|    |   |
+     * |Ctrl |Win| L3 |F12|  L2|   0   |   ,|  .|    |   |
      * `-------------------------------------------------'
      */
 	KEYMAP(
-		 ESC, PGUP,   UP, PGDN, HOME, BSPC, FN22,    7,    8,    9, MINS, SLSH,
-		LALT, LEFT, DOWN, RGHT,  END,  DEL, NUBS,    4,    5,    6, FN29, FN16,
-		TRNS,   NO,   NO,   NO,   NO,  ENT, FN30,    1,    2,    3, FN27, TRNS,
-		TRNS, TRNS, TRNS, TRNS, TRNS,          0,       COMM,  DOT, TRNS
+		 ESC,   F1,   F2,   F3,   F4,   F5,    7,    8,    9, FN22, MINS, SLSH,
+		LALT, HOME, PGUP, PGDN,  END,  F11,    4,    5,    6, FN27, FN16, FN29,
+		LSFT,   F6,   F7,   F8,   F9,  F10,    1,    2,    3, NUBS, FN30,  ENT,
+		LCTL, LGUI,  FN2,  F12,  FN1,          0,       COMM,  DOT,   NO
 		),
 	/* 3: function and media
      * ,-------------------------------------------------.
-     * |Esc  | F1| F2| F3| F4|PSc|Prv|Nxt|Ply|   |   |   |
+     * |Esc  |Prv|Nxt|Ply|   |   |   |   |   |   |   |   |
      * |-------------------------------------------------|
-     * |Alt  | F5| F6| F7| F8|Ins| V-| V+|Mut|   |   |   |
+     * |Alt  | V-| V+|Mut|   |   |   |   |   |   |   |   |
      * |-------------------------------------------------|
-     * |Shft | F9|F10|F11|F12|App|   |   |   |   |   |   |
+     * |Shft |PSc|Ins|App|   |   |   |   |   |   |   |   |
      * |---------------------------------------------|   |
      * |Ctrl |Win| L3 |Alt|  L2|       |    |   |    |   |
      * `-------------------------------------------------'
      */
 	KEYMAP(
-		 ESC,   F1,   F2,   F3,   F4, PSCR, MPRV, MNXT, MPLY, TRNS, TRNS, TRNS,
-		LALT,   F5,   F6,   F7,   F8,  INS, VOLD, VOLU, MUTE, TRNS, TRNS, TRNS,
-		TRNS,   F9,  F10,  F11,  F12,  APP, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
-		TRNS, TRNS, TRNS, TRNS, TRNS,       TRNS,       TRNS, TRNS, TRNS
+		 ESC, MPRV, MNXT, MPLY,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
+		LALT, VOLD, VOLU, MUTE,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
+		LSFT, PSCR,  INS,  APP,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
+		LCTL, LGUI,  FN2, LALT,  FN1,         NO,         NO,   NO,   NO
 		),
 	KEYMAP(
 		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
