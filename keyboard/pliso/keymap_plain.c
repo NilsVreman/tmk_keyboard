@@ -44,50 +44,50 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-------------------------------------------------|
      * |L1   |  A|  S|  D|  F|  G|  H|  J|  K|  L|  Ö|  Ä|
      * |-------------------------------------------------|
-     * |Shft |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|   |
+     * |Shft |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  -|   |
      * |---------------------------------------------|Ent|
-     * |Ctrl |Win| L3 |Alt|  L2| Space |  L1|Del|Bspc|   |
+     * |Ctrl |Win| L3 |Alt|  L2| Space |Bspc| L1| Del|   |
      * `-------------------------------------------------'
      */
 	KEYMAP(
 		 TAB,    Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P, LBRC,
 		 FN0,    A,    S,    D,    F,    G,    H,    J,    K,    L, SCLN, QUOT,
 		LSFT,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,  ENT,
-		LCTL, LGUI,  FN2, LALT,  FN1,        SPC,        FN0,  DEL, BSPC
+		LCTL, LGUI,  FN2, LALT,  FN1,        SPC,       BSPC,  FN0,  DEL
 		),
 	/* 1: symbols and nav
      * ,-------------------------------------------------.
      * |Esc  |  !|  "|  #|  ¤|  %|  /|  (|  )|  \|  ?|  ^|
      * |-------------------------------------------------|
-     * |L1   |  §|  @|  £|  $|  &|Lft| Up|Dwn|Rht|  ~|  '|
+     * |L1   |  §|  @|  £|  $|  &|Lft| Up|Dwn|Rht|  <|  '|
      * |-------------------------------------------------|
-     * |Shft |  ||   |  `|  ´|  ¨|  [|  {|  }|  ]|   |   |
-     * |---------------------------------------------|Del|
-     * |Ctrl |Win| L3 |Alt|  L2|  Bspc |  L1|Del|Bspc|   |
+     * |Shft |  ||   |  `|  ´|  ¨|  [|  {|  }|  ]|  >|   |
+     * |---------------------------------------------|Ent|
+     * |Ctrl |Win| L3 |Alt|  L2| Space | Del| L1|Bspc|   |
      * `-------------------------------------------------'
      */
 	KEYMAP(
 		 ESC,  FN6,  FN7,  FN9, FN11, FN13, FN16, FN18, FN20, FN25, FN24, FN27,
-		 FN0,  GRV,  FN8, FN10, FN12, FN15, LEFT, DOWN,   UP, RGHT, FN28, NUHS,
-		LSFT, FN31,   NO, FN26,  EQL, RBRC, FN19, FN17, FN23, FN21,   NO,  DEL,
-		LCTL, LGUI,  FN2, LALT,  FN1,       BSPC,        FN0,  DEL, BSPC
+		 FN0,  GRV,  FN8, FN10, FN12, FN15, LEFT, DOWN,   UP, RGHT, NUBS, NUHS,
+		LSFT, FN31,   NO, FN26,  EQL, RBRC, FN19, FN17, FN23, FN21, FN30,  ENT,
+		LCTL, LGUI,  FN2, LALT,  FN1,        SPC,        DEL,  FN0, BSPC
 		),
 	/* 2: numpad, f-keys and large scale movement
      * ,-------------------------------------------------.
-     * |Esc  | F1| F2| F3| F4| F5|  7|  8|  9|  =|  +|  -|
+     * |Esc  | F1| F2| F3| F4| F5|  7|  8|  9|  =|  +|  ~|
      * |-------------------------------------------------|
-     * |Alt  |Hom|PgU|PgD|End|F11|  4|  5|  6|  ^|  /|  *|
+     * |Alt  |Hom|PgU|PgD|End|F11|  4|  5|  6|  ,|  /|  *|
      * |-------------------------------------------------|
-     * |Shft | F6| F7| F8| F9|F10|  1|  2|  3|  <|  >|   |
+     * |Shft | F6| F7| F8| F9|F10|  1|  2|  3|  .|  -|   |
      * |---------------------------------------------|Ent|
-     * |Ctrl |Win| L3 |F12|  L2|   0   |   ,|  .|    |   |
+     * |Ctrl |Win| L3 |F12|  L2|   0   |Bspc| L1| Del|   |
      * `-------------------------------------------------'
      */
 	KEYMAP(
-		 ESC,   F1,   F2,   F3,   F4,   F5,    7,    8,    9, FN22, MINS, SLSH,
-		LALT, HOME, PGUP, PGDN,  END,  F11,    4,    5,    6, FN27, FN16, FN29,
-		LSFT,   F6,   F7,   F8,   F9,  F10,    1,    2,    3, NUBS, FN30,  ENT,
-		LCTL, LGUI,  FN2,  F12,  FN1,          0,       COMM,  DOT,   NO
+		 ESC,   F1,   F2,   F3,   F4,   F5,    7,    8,    9, FN22, MINS, FN28,
+		LALT, HOME, PGUP, PGDN,  END,  F11,    4,    5,    6, COMM, FN16, FN29,
+		LSFT,   F6,   F7,   F8,   F9,  F10,    1,    2,    3,  DOT, SLSH,  ENT,
+		LCTL, LGUI,  FN2,  F12,  FN1,          0,       BSPC,  FN0,  DEL
 		),
 	/* 3: function and media
      * ,-------------------------------------------------.
