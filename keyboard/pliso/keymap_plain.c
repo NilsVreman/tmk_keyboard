@@ -63,14 +63,14 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-------------------------------------------------|
      * |Shft |  ||   |  `|  ´|  ¨|  [|  {|  }|  ]|  >|   |
      * |---------------------------------------------|Ent|
-     * |Ctrl |Win| L3 |Alt|  L2| Space | Del| L1|Bspc|   |
+     * |Ctrl |Win| L3 |Alt|  L2| Space |Bspc| L1| Del|   |
      * `-------------------------------------------------'
      */
 	KEYMAP(
 		 ESC,  FN6,  FN7,  FN9, FN11, FN13, FN16, FN18, FN20, FN25, FN24, FN27,
 		 FN0,  GRV,  FN8, FN10, FN12, FN15, LEFT, DOWN,   UP, RGHT, NUBS, NUHS,
 		LSFT, FN31,   NO, FN26,  EQL, RBRC, FN19, FN17, FN23, FN21, FN30,  ENT,
-		LCTL, LGUI,  FN2, LALT,  FN1,        SPC,        DEL,  FN0, BSPC
+		LCTL, LGUI,  FN2, LALT,  FN1,        SPC,       BSPC,  FN0,  DEL
 		),
 	/* 2: numpad, f-keys and large scale movement
      * ,-------------------------------------------------.

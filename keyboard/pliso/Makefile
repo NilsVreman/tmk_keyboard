@@ -1,5 +1,5 @@
 # Target file name (without extension).
-PROJECT = ch
+PROJECT = pliso
 
 # Directory common source files exist
 TMK_DIR = ../../tmk_core
