@@ -27,78 +27,72 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------|      |-----------------------------|
      * |L1  |   A|   S|   D|   F|   G|      |   H|   J|   K|   L|   Ö|   Ä|
      * |-----------------------------|      |-----------------------------|
-     * |Shft|   Z|   X|   C|   V|   B|      |   N|   M|   ,|   .|   -| Ent|
+     * |Shft|   Z|   X|   C|   V|   B|      |   N|   M|   ,|   .|   -|    |
      * |--------------------------------.,--------------------------------|
-     * |Ctrl| Win|  L3|  | Alt|  L2|  L2||Bspc| Spc| Del|  |  L1|    |    |
+     * |Ctrl| Win|  L3|  | Alt|  L2|  L1||Bspc| Spc| Del|  |  L1|    | Ent|
      * `--------------'  `--------------'`--------------'  `--------------'
      */
 	KEYMAP(
 		 TAB,    Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P, LBRC,
 		 FN0,    A,    S,    D,    F,    G,    H,    J,    K,    L, SCLN, QUOT,
-		LSFT,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,  ENT,
-		LCTL, LGUI,  FN2, LALT,  FN1,  FN1, BSPC,  SPC,  DEL,  FN0,   NO,   NO
+		LSFT,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,   NO,
+		LCTL, LGUI,  FN2, LALT,  FN1,  FN0, BSPC,  SPC,  DEL,  FN0,   NO,  ENT
 		),
 	/* 1: symbols and arrows
      * ,-----------------------------.      ,-----------------------------.
-     * |Esc |   !|   "|   #|   ¤|   %|      |   /|   (|   )|   \|   ?|   ^|
+     * |Esc |   !|   "|   #|   %|   &|      |   /|   (|   )|   \|   ?|   ^|
      * |-----------------------------|      |-----------------------------|
-     * |L1  |   §|   @|   £|   $|   &|      |Left|  Up|Down|Rhgt|   <|   '|
+     * |L1  |   ||   @|Tab-|   $|Tab+|      |Left|  Up|Down|Rhgt|    |   '|
      * |-----------------------------|      |-----------------------------|
-     * |Shft|   ||    |   `|   ´|   ¨|      |   [|   {|   }|   ]|   >| Ent|
+     * |Shft|    |    |   `|   ´|   ¨|      |   [|   {|   }|   ]|    |    |
      * |--------------------------------.,--------------------------------|
-     * |Ctrl| Win|  L3|  | Alt|  L2|  L2||Bspc| Spc| Del|  |  L1|    |    |
+     * |Ctrl| Win|  L3|  | Alt|  L2|  L1||Bspc| Spc| Del|  |  L1|    | Ent|
      * `--------------'  `--------------'`--------------'  `--------------'
      */
 	KEYMAP(
-	 	 ESC,  FN6,  FN7,  FN9, FN11, FN13, FN16, FN18, FN20, FN25, FN24, FN27,
-		 FN0,  GRV,  FN8, FN10, FN12, FN15, LEFT, DOWN,   UP, RGHT, NUBS, NUHS,
-		LSFT, FN31,   NO, FN26,  EQL, RBRC, FN19, FN17, FN23, FN21, FN30,  ENT,
-		LCTL, LGUI,  FN2, LALT,  FN1,  FN1, BSPC,  SPC,  DEL,  FN0,   NO,   NO
+		 ESC,  FN6,  FN7,  FN9, FN13, FN15, FN16, FN18, FN20, FN25, FN24, FN27,
+		 FN0, FN31,  FN8, FN11, FN12, FN10, LEFT, DOWN,   UP, RGHT,   NO, NUHS,
+		LSFT,   NO,   NO, FN26,  EQL, RBRC, FN19, FN17, FN23, FN21,   NO,   NO,
+		LCTL, LGUI,  FN2, LALT,  FN1,  FN0, BSPC,  SPC,  DEL,  FN0,   NO,  ENT
 		),
 	/* 2: numpad, f-keys and large scale movement
      * ,-----------------------------.      ,-----------------------------.
-     * |Esc |  F1|  F2|  F3|  F4|  F5|      |   7|   8|   9|   =|   +|   ~|
+     * |Esc |  F1|  F2|  F3|  F4|  F5|      |   =|   7|   8|   9|   +|   ~|
      * |-----------------------------|      |-----------------------------|
-     * |Alt |Home|PgUp|PgDn| End| F11|      |   4|   5|   6|   ,|   /|   *|
+     * |Alt |Home|PgUp|PgDn| End| F11|      |   <|   4|   5|   6|   /|   *|
      * |-----------------------------|      |-----------------------------|
-     * |Shft|  F6|  F7|  F8|  F9| F10|      |   1|   2|   3|   .|   -| Ent|
+     * |Shft|  F6|  F7|  F8|  F9| F10|      |   >|   1|   2|   3|   -|    |
      * |--------------------------------.,--------------------------------|
-     * |Ctrl| Win|  L3|  | F12|  L2|  L2||Bspc|   0| Del|  |  L1|    |    |
+     * |Ctrl| Win|  L3|  | F12|  L2|  L1||Bspc|   0| Del|  |  L1|    | Ent|
      * `--------------'  `--------------'`--------------'  `--------------'
      */
 	KEYMAP(
-		 ESC,   F1,   F2,   F3,   F4,   F5,    7,    8,    9, FN22, MINS, FN28,
-		LALT, HOME, PGUP, PGDN,  END,  F11,    4,    5,    6, COMM, FN16, FN29,
-		LSFT,   F6,   F7,   F8,   F9,  F10,    1,    2,    3,  DOT, SLSH,  ENT,
-		LCTL, LGUI,  FN2,  F12,  FN1,  FN1, BSPC,    0,  DEL,  FN0,   NO,   NO
+		 ESC,   F1,   F2,   F3,   F4,   F5, FN22,    7,    8,    9, MINS, FN28,
+		LALT, HOME, PGUP, PGDN,  END,  F11, NUBS,    4,    5,    6, FN16, FN29,
+		LSFT,   F6,   F7,   F8,   F9,  F10, FN30,    1,    2,    3, SLSH,   NO,
+		LCTL, LGUI,  FN2,  F12,  FN1,  FN0, BSPC,    0,  DEL,  FN0,   NO,  ENT
 		),
 	/* 3: function and media
      * ,-----------------------------.      ,-----------------------------.
-     * |Esc |Prev|Next|Play|    |    |      |    |    |    |    |    |    |
+     * |    |Prev|Next|Play|    |    |      |    |    |    |    |    |    |
      * |-----------------------------|      |-----------------------------|
-     * |Alt |  V-|  V+|Mute|    |    |      |    |    |    |    |    |    |
+     * |    |  V-|  V+|Mute|    |    |      |    |    |    |    |    |    |
      * |-----------------------------|      |-----------------------------|
-     * |Shft|PScr| Ins| App|    |    |      |    |    |    |    |    |    |
+     * |    |PScr| Ins| App|    |    |      |    |    |    |    |    |    |
      * |--------------------------------.,--------------------------------|
-     * |Ctrl| Win|  L3|  | Alt|  L2|  L2||    |    |    |  |    |    |    |
+     * |    |    |  L3|  |    |    |    ||    |    |    |  |    |    |    |
      * `--------------'  `--------------'`--------------'  `--------------'
      */
 	KEYMAP(
-		 ESC, MPRV, MNXT, MPLY,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
-		LALT, VOLD, VOLU, MUTE,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
-		LSFT, PSCR,  INS,  APP,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
-		LCTL, LGUI,  FN2, LALT,  FN1,  FN1,   NO,   NO,   NO,   NO,   NO,   NO
-		),
-	KEYMAP(
-		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
-		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
-		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
-		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS
+		  NO, MPRV, MNXT, MPLY,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
+		  NO, VOLD, VOLU, MUTE,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
+		  NO, PSCR,  INS,  APP,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
+		  NO,   NO,  FN2,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO
 		),
 };
 
 const action_t PROGMEM fn_actions[] = {
-	// Layer 0-5
+	// Layer 1-6
 	[0] = ACTION_LAYER_MOMENTARY(1),
 	[1] = ACTION_LAYER_MOMENTARY(2),
 	[2] = ACTION_LAYER_MOMENTARY(3),
@@ -106,13 +100,15 @@ const action_t PROGMEM fn_actions[] = {
 	[4] = ACTION_LAYER_MOMENTARY(5),
 	[5] = ACTION_LAYER_MOMENTARY(6),
 
+	// Macros
+	[10] = ACTION_MODS_KEY(MOD_LCTL, KC_TAB), // Ctrl+Tab
+	[11] = ACTION_MODS_KEY(MOD_LCTL | MOD_LSFT, KC_TAB), // Ctrl+Shift+Tab
+
 	// Special Characters
 	[6]  = ACTION_MODS_KEY(MOD_LSFT, KC_1), // !	
 	[7]  = ACTION_MODS_KEY(MOD_LSFT, KC_2), // "
 	[8]  = ACTION_MODS_KEY(MOD_RALT, KC_2), // @
 	[9]  = ACTION_MODS_KEY(MOD_LSFT, KC_3), // #
-	[10] = ACTION_MODS_KEY(MOD_RALT, KC_3), // £
-	[11] = ACTION_MODS_KEY(MOD_LSFT, KC_4), // ¤
 	[12] = ACTION_MODS_KEY(MOD_RALT, KC_4), // $
 	[13] = ACTION_MODS_KEY(MOD_LSFT, KC_5), // %
 	[14] = ACTION_MODS_KEY(MOD_RALT, KC_5), // €
