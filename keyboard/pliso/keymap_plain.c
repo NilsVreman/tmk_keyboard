@@ -1,20 +1,3 @@
-/*
-Copyright 2012,2013 Jun Wako <wakojun@gmail.com>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 #include "keycode.h"
 #include "action.h"
 #include "action_macro.h"
@@ -59,18 +42,18 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-------------------------------------------------.
      * |Esc  |  !|  "|  #|  %|  &|  /|  (|  )|  \|  ?|  ^|
      * |-------------------------------------------------|
-     * |L1   |  ||  @|Tb-|  $|Tb+|Lft| Up|Dwn|Rht|   |  '|
+     * |     |  ||  @|Tb-|  $|Tb+|Lft| Up|Dwn|Rht|XXX|  '|
      * |-------------------------------------------------|
-     * |Shft |   |   |  `|  ´|  ¨|  [|  {|  }|  ]|   |   |
-     * |---------------------------------------------|Ent|
-     * |Ctrl |Win| L3 |Alt|  L2| Space |Bspc| L1| Del|   |
+     * |     |XXX|XXX|  `|  ´|  ¨|  [|  {|  }|  ]|XXX|   |
+     * |---------------------------------------------|   |
+     * |     |   |    |   |    |       |    |   |    |   |
      * `-------------------------------------------------'
      */
 	KEYMAP(
 		 ESC,  FN6,  FN7,  FN9, FN13, FN15, FN16, FN18, FN20, FN25, FN24, FN27,
-		 FN0, FN31,  FN8, FN11, FN12, FN10, LEFT, DOWN,   UP, RGHT,   NO, NUHS,
-		LSFT,   NO,   NO, FN26,  EQL, RBRC, FN19, FN17, FN23, FN21,   NO,  ENT,
-		LCTL, LGUI,  FN2, LALT,  FN1,        SPC,       BSPC,  FN0,  DEL
+		TRNS, FN31,  FN8, FN11, FN12, FN10, LEFT, DOWN,   UP, RGHT,   NO, NUHS,
+		TRNS,   NO,   NO, FN26,  EQL, RBRC, FN19, FN17, FN23, FN21,   NO, TRNS,
+		TRNS, TRNS, TRNS, TRNS, TRNS,       TRNS,       TRNS, TRNS, TRNS
 		),
 	/* 2: numpad, f-keys and large scale movement
      * ,-------------------------------------------------.
@@ -78,16 +61,16 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-------------------------------------------------|
      * |Alt  |Hom|PgU|PgD|End|F11|  <|  4|  5|  6|  /|  *|
      * |-------------------------------------------------|
-     * |Shft | F6| F7| F8| F9|F10|  >|  1|  2|  3|  -|   |
-     * |---------------------------------------------|Ent|
-     * |Ctrl |Win| L3 |F12|  L2|   0   |Bspc| L1| Del|   |
+     * |     | F6| F7| F8| F9|F10|  >|  1|  2|  3|  -|   |
+     * |---------------------------------------------|   |
+     * |     |   |    |F12|    |   0   |    |   |    |   |
      * `-------------------------------------------------'
      */
 	KEYMAP(
 		 ESC,   F1,   F2,   F3,   F4,   F5, FN22,    7,    8,    9, MINS, FN28,
 		LALT, HOME, PGUP, PGDN,  END,  F11, NUBS,    4,    5,    6, FN16, FN29,
-		LSFT,   F6,   F7,   F8,   F9,  F10, FN30,    1,    2,    3, SLSH,  ENT,
-		LCTL, LGUI,  FN2,  F12,  FN1,          0,       BSPC,  FN0,  DEL
+		TRNS,   F6,   F7,   F8,   F9,  F10, FN30,    1,    2,    3, SLSH, TRNS,
+		TRNS, TRNS, TRNS,  F12, TRNS,          0,       TRNS, TRNS, TRNS
 		),
 	/* 3: function and media
      * ,-------------------------------------------------.
@@ -104,7 +87,7 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		  NO, MPRV, MNXT, MPLY,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
 		  NO, VOLD, VOLU, MUTE,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
 		  NO, PSCR,  INS,  APP,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,
-		  NO,   NO,  FN2,   NO,   NO,         NO,         NO,   NO,   NO
+		  NO,   NO, TRNS,   NO,   NO,         NO,         NO,   NO,   NO
 		),
 };
 
