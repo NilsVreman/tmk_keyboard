@@ -1,5 +1,5 @@
 [{a:7,w:12.25,d:true},"L0 - Alpha"],
-{a:4},"Tab","Q","W","E","R","T",{x:0.25},"Y","U","I","O","P","Å"],
+[{a:4},"Tab","Q","W","E","R","T",{x:0.25},"Y","U","I","O","P","Å"],
 [{c:"#b0b0b0"},"\n\n\nL1",{c:"#cccccc"},"A","S","D","F","G",{x:0.25},"H","J","K","L","Ö","Ä"],
 ["Shift","Z","X","C","V","B",{x:0.25},"N","M",",\n\n;",".\n\n:","-\n\n_","Enter"],
 ["Ctrl","Win/Alt",{c:"#b0b0b0"},"\n\n\nL3","\n\n\nL1",{c:"#cccccc"},"Alt/Win",{c:"#b0b0b0"},"\n\n\nL2",{x:0.25,c:"#cccccc"},"Space","Back space","Delete",{c:"#b0b0b0"},"\n\n\nL2","\n\n\nL1","\n\n\nL3"],
