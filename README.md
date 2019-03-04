@@ -15,7 +15,7 @@ On windows I have got it to work with avr gompiler and libc from: <https://sourc
 
 On ubunto it have worked with the avr-gcc and avr-lic from apt-get's default repository.
 
-# Flasing
+# Flashing
 Teensy Loader can be found here: <https://www.pjrc.com/teensy/loader.html>
 
 # Misc
