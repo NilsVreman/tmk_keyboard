@@ -16,14 +16,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------||-----------------------------|
      * |Shft|   Z|   X|   C|   V|   B||   N|   M|   ,|   .|   -| Ent|
      * |-----------------------------||-----------------------------|
-     * |Ctrl| Alt|  L3| Alt| Win|  L2|| Spc|Bspc| Del|  L2|  L1|  L3|
+     * |Ctrl| Alt| Win| Alt| Win|  L2|| Spc|Bspc| Del|  L1|  L2|  L3|
      * `-----------------------------'`-----------------------------'
      */
 	KEYMAP(
 		 TAB,    Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P, LBRC,
 		 FN1,    A,    S,    D,    F,    G,    H,    J,    K,    L, SCLN, QUOT,
 		LSFT,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,  ENT,
-		LCTL, LALT,  FN3, LALT, LGUI,  FN2,  SPC, BSPC,  DEL,  FN2,  FN1,  FN3
+		LCTL, LALT, LGUI, LALT, LGUI,  FN2,  SPC, BSPC,  DEL,  FN1,  FN2,  FN3
 		),
 	/* 0.5: Flip Win and Alt
      * ,-----------------------------.,-----------------------------.
@@ -33,14 +33,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------||-----------------------------|
      * |    |    |    |    |    |    ||    |    |    |    |    |    |
      * |-----------------------------||-----------------------------|
-     * |    | Win|    | Win| Alt|    ||    |    |    |    |    |    |
+     * |    | Win| Alt| Win| Alt|    ||    |    |    |    |    |    |
      * `-----------------------------'`-----------------------------'
      */
 	KEYMAP(
 		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
 		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
 		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
-		TRNS, LGUI, TRNS, LGUI, LALT, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS
+		TRNS, LGUI, LALT, LGUI, LALT, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS
 		),
 	/* 1: symbols and arrows
      * ,-----------------------------.,-----------------------------.
