@@ -5,7 +5,7 @@
 ["Alt","Super","Ctrl",{c:"#b0b0b0"},"\n\n\nL3",{c:"#cccccc"},"Super",{c:"#b0b0b0"},"\n\n\nL1",{x:0.25,c:"#cccccc"},"Space",{c:"#b0b0b0"},"\n\n\nL2",{c:"#cccccc"},"Shift","Back space","Delete","Enter"],
 [{y:0.25,a:7,w:12.25,d:true},"L1"],
 [{a:4},"Esc","Prev","Next","Vol -","Vol +","Mute",{x:0.25},"/","(",")","\\","?","+"],
-["Ctrl",{a:7},"",{a:4},"Home","Page Up","Page Down","End",{x:0.25},"[","{","}","]","*","'"],
+["Ctrl",{c:"#b0b0b0"},"\n\n\nL3",{c:"#cccccc"},"Home","Page Up","Page Down","End",{x:0.25},"[","{","}","]","*","'"],
 ["Shift","Play Pause","Alt+ Left","Ctrl+ Shift+ Tab","Ctrl+ Tab","Alt+ Right",{x:0.25},"=","<",">","~","^","Shift"],
 ["Alt","Super","Ctrl",{c:"#b0b0b0"},"\n\n\nL3",{c:"#cccccc"},"Super",{c:"#555555"},"\n\n\nL1",{x:0.25,c:"#cccccc"},"Space",{c:"#b0b0b0"},"\n\n\nL3",{c:"#cccccc"},"Shift","Back space","Delete","Enter"],
 [{y:0.25,a:7,w:12.25,d:true},"L2"],
@@ -14,7 +14,7 @@
 [{a:4},"Shift","Ctrl+Z",{a:7},"",{a:4},"`","´",{a:7},"",{x:0.25},"",{a:4},"Menu/ App","Insert","Print Screen",{a:7},"",{a:4},"Shift"],
 ["Alt","Super","Ctrl",{c:"#b0b0b0"},"\n\n\nL3",{c:"#cccccc"},"Super",{c:"#b0b0b0"},"\n\n\nL3",{x:0.25,c:"#cccccc"},"Space",{c:"#555555"},"\n\n\nL2",{c:"#cccccc"},"Shift","Back space","Delete","Enter"],
 [{y:0.25,a:7,w:12.25,d:true},"L3"],
-[{a:4},"Esc",{a:7},"",{a:4},"F1","F2","F3","F4",{x:0.25,a:7},"",{a:4},"7","8","9",{a:7},"",{a:4},"Win Alt Swap"],
-["Ctrl","Alt","F5","F6","F7","F8",{x:0.25,a:7},"",{a:4},"4","5","6",{a:7},"",""],
+[{a:4},"Esc","Alt","F1","F2","F3","F4",{x:0.25,a:7},"",{a:4},"7","8","9",{a:7},"",{a:4},"Win Alt Swap"],
+["Ctrl",{c:"#909090"},"\n\n\nL1",{c:"#cccccc"},"F5","F6","F7","F8",{x:0.25,a:7},"",{a:4},"4","5","6",{a:7},"",""],
 [{a:4},"Shift",{a:7},"",{a:4},"F9","F10","F11","F12",{x:0.25},"0","1","2","3","Super","Shift"],
-["Alt","Super","Ctrl",{c:"#555555"},"\n\n\nL3",{c:"#cccccc"},"Super",{c:"#999999"},"\n\n\nL1",{x:0.25,c:"#cccccc"},"0",{c:"#999999"},"\n\n\nL2",{c:"#cccccc"},"Shift","Back space","Delete","Enter"]
+["Alt","Super","Ctrl",{c:"#555555"},"\n\n\nL3",{c:"#cccccc"},"Super",{c:"#909090"},"\n\n\nL1",{x:0.25,c:"#cccccc"},"0",{c:"#909090"},"\n\n\nL2",{c:"#cccccc"},"Shift","Back space","Delete","Enter"]

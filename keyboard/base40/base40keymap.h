@@ -46,7 +46,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-----------------------------.,-----------------------------.
      * | Esc|Prev|Next|  V-|  V+|Mute||   /|   (|   )|   \|   ?|   +|
      * |-----------------------------||-----------------------------|
-     * |    |    |Home|PgUp|PgDn| End||   [|   {|   }|   ]|   *|   '|
+     * |    |  L3|Home|PgUp|PgDn| End||   [|   {|   }|   ]|   *|   '|
      * |-----------------------------||-----------------------------|
      * |    |Play|Alt<|Tab-|Tab+|Alt>||   =|   <|   >|   ~|   ^|    |
      * |-----------------------------||-----------------------------|
@@ -55,7 +55,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
 	KEYMAP(
 		 ESC, MPRV, MNXT, VOLD, VOLU, MUTE, FN16, FN18, FN20, FN25, FN24, MINS,
-		TRNS, TRNS, HOME, PGUP, PGDN,  END, FN19, FN17, FN23, FN21, FN29, NUHS,
+		TRNS,  FN3, HOME, PGUP, PGDN,  END, FN19, FN17, FN23, FN21, FN29, NUHS,
 		TRNS, MPLY,  FN5,  FN8,  FN7,  FN6, FN22, NUBS, FN30, FN28, FN27, TRNS,
 		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,  FN3, TRNS, TRNS, TRNS, TRNS
 		),
@@ -71,16 +71,16 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------'`-----------------------------'
      */
 	KEYMAP(
-		 ESC,  FN9, FN10, FN12, FN14, FN15,   NO, BSPC,  DEL,   NO,   NO, FN28,
+		 ESC,  FN9, FN10, FN12, FN14, FN15,   NO, BSPC,  DEL,   NO,   NO,  ENT,
 		TRNS, FN31, FN11,   NO, FN13,   NO, LEFT, DOWN,   UP, RGHT,   NO,   NO,
 		TRNS,  FN4,   NO, FN26,  EQL,   NO,   NO,  APP,  INS, PSCR,   NO, TRNS,
 		TRNS, TRNS, TRNS, TRNS, TRNS,  FN3, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS
 		),
 	/* 3:
      * ,-----------------------------.,-----------------------------.
-     * | Esc|    |  F1|  F2|  F3|  F4||    |   7|   8|   9|    |W->A|
+     * | Esc| Alt|  F1|  F2|  F3|  F4||    |   7|   8|   9|    |W->A|
      * |-----------------------------||-----------------------------|
-     * |    | Alt|  F5|  F5|  F7|  F8||    |   4|   5|   6|    |    |
+     * |    |    |  F5|  F5|  F7|  F8||    |   4|   5|   6|    |    |
      * |-----------------------------||-----------------------------|
      * |    |    |  F9| F10| F11| F12||   0|   1|   2|   3| Win|    |
      * |-----------------------------||-----------------------------|
@@ -88,8 +88,8 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------'`-----------------------------'
      */
 	KEYMAP(
-		 ESC,   NO,   F1,   F2,   F3,   F4,   NO,    7,    8,    9,   NO,  FN0,
-		TRNS, LALT,   F5,   F6,   F7,   F8,   NO,    4,    5,    6,   NO,   NO,
+		 ESC, LALT,   F1,   F2,   F3,   F4,   NO,    7,    8,    9,   NO,  FN0,
+		TRNS, TRNS,   F5,   F6,   F7,   F8,   NO,    4,    5,    6,   NO,   NO,
 		TRNS,   NO,   F9,  F10,  F11,  F12,    0,    1,    2,    3, LGUI, TRNS,
 		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,    0, TRNS, TRNS, TRNS, TRNS, TRNS
 		),
