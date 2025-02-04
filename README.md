@@ -13,7 +13,7 @@ I have had no luck with Windows.
 ### Teensy 2.0
 On windows I have got it to work with avr compiler and libc from: <https://sourceforge.net/projects/mobilechessboar/files/avr-gcc%20snapshots%20%28Win32%29/>
 
-On ubunto it have worked with the avr-gcc and avr-libc from apt-get's default repository.
+On ubuntu it have worked with the avr-gcc and avr-libc from apt-get's default repository.
 
 # Flashing
 Teensy Loader can be found here: <https://www.pjrc.com/teensy/loader.html>
