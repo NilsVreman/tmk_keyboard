@@ -3,20 +3,39 @@ Private fork for my own keyboards. Removed everything I didn't use.
 The latest source code for the tmk_fimrware is available here: <http://github.com/tmk/tmk_keyboard>
 
 # Compilation
+
 Make is needed.
 
 ### Teensy LC
+
 Quite easy to find arm compiler and standard library for linux, (arm-none-eabi-gcc 7.2.1 worked with no problem).
 
 I have had no luck with Windows.
 
 ### Teensy 2.0
+
 On windows I have got it to work with avr compiler and libc from: <https://sourceforge.net/projects/mobilechessboar/files/avr-gcc%20snapshots%20%28Win32%29/>
 
 On ubuntu it have worked with the avr-gcc and avr-libc from apt-get's default repository.
 
 # Flashing
+
 Teensy Loader can be found here: <https://www.pjrc.com/teensy/loader.html>
 
 # Misc
+
 Layout json files are for: <http://www.keyboard-layout-editor.com>
+
+# Workflow
+
+1. Update keyboard layout in [the header file](./keyboard/base40/base40keymap.h).
+1. Download a compiler for the board you want to flash (for me it's an `atmega32u4`, so I downloaded the AUR official `avr-gcc`).
+1. Compile the firmware using [make](./keyboard/stomp/Makefile).
+1. Download and open [Teensy Loader](https://www.pjrc.com/teensy/loader.html).
+   - don't forget to set the rules first.
+1. Open the compiled `.hex` file in Teensy Loader.
+1. Press the button on the Teensy board.
+1. wait for the upload to finish.
+1. Click the "program" button in Teensy Loader.
+1. Click the "reboot" button in Teensy Loader.
+1. Enjoy your keyboard.
