@@ -7,14 +7,34 @@
 #include "debug.h"
 #include "keymap.h"
 
+/**
+ * Quick intro to shorthands:
+ * xCTL = <Left/Right> Control
+ * xSFT = <Left/Right> Shift
+ * xALT = <Left/Right> Alt
+ * xGUI = <Left/Right> GUI (Windows/Command key)
+ * xBRC = <Left/Right> Bracket
+ * SCLN = Semicolon
+ * QUOT = Quote
+ * COMM = Comma
+ * SLSH = Slash
+ * ENT  = Enter
+ * SPC  = Space
+ * BSPC = Backspace
+ * FNx  = Fn key, where x is the Fn key number in fn_actions
+ * GRV  = Grave
+ * NUHS = Non-US Hash (ISO key, next to left shift on UK/US keyboards)
+ * NUBS = Non-US Backslash (ISO key, next to left shift on UK/US keyboards)
+ */
+
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	/* 0: alphas
      * ,-----------------------------.,-----------------------------.
-     * |Tab |   Q|   W|   E|   R|   T||   Y|   U|   I|   O|   P|   Å|
+     * |Tab |   Q|   W|   E|   R|   T||   Y|   U|   I|   O|   P|   [|
      * |-----------------------------||-----------------------------|
-     * |L1  |   A|   S|   D|   F|   G||   H|   J|   K|   L|   Ö|   Ä|
+     * |L1  |   A|   S|   D|   F|   G||   H|   J|   K|   L|   ;|   '|
      * |-----------------------------||-----------------------------|
-     * |Shft|   Z|   X|   C|   V|   B||   N|   M|   ,|   .|   -| Ent|
+     * |Shft|   Z|   X|   C|   V|   B||   N|   M|   ,|   .|   /| Ent|
      * |-----------------------------||-----------------------------|
      * |Ctrl| Alt| Win| Alt| Win|  L2|| Spc|Bspc| Del|  L1|  L2|  L3|
      * `-----------------------------'`-----------------------------'
@@ -44,36 +64,36 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		),
 	/* 1: symbols and arrows
      * ,-----------------------------.,-----------------------------.
-     * |    |   !|   "|   #|   %|   &||   /|   (|   )|   \|   ?|   ^|
+     * |   `|   !|   "|   £|   $|   %||   ^|   &|   *|   (|   )|   _|
      * |-----------------------------||-----------------------------|
-     * |    |   ||   @|XXXX|   $|XXXX||Left|  Up|Down|Rhgt|   `|   '|
+     * |    |    |    |    |    |    ||Left|  Up|Down|Rght|    |   #|
      * |-----------------------------||-----------------------------|
-     * |    |XXXX|XXXX| F11| F12|   ¨||   [|   {|   }|   ]|   ´|    |
+     * |    |    |    |    |    |    ||   [|   {|   }|   ]|   \|    |
      * |-----------------------------||-----------------------------|
      * |    |    |    |    |    |  L3||    |    |    |    |    |    |
      * `-----------------------------'`-----------------------------'
      */
 	KEYMAP(
-		TRNS,  FN9, FN10, FN12, FN14, FN15, FN16, FN18, FN20, FN25, FN24, FN27,
-		TRNS, FN31, FN11,   NO, FN13,   NO, LEFT, DOWN,   UP, RGHT, FN26, NUHS,
-		TRNS,   NO,   NO,  F11,  F12, RBRC, FN19, FN17, FN23, FN21,  EQL, TRNS,
+		 GRV,  FN9, FN10, FN11, FN12, FN13, FN14, FN15, FN16, FN17, FN18, FN19,
+		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, LEFT, DOWN,   UP, RGHT, FN24, NUHS,
+		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, LBRC, FN22, FN21, RBRC, NUBS, TRNS,
 		TRNS, TRNS, TRNS, TRNS, TRNS,  FN3, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS
 		),
 	/* 2: numpad, f-keys and large scale movement
      * ,-----------------------------.,-----------------------------.
-     * |Esc |  F1|  F2|  F3|  F4|  F5||   =|   7|   8|   9|   +|   ~|
+     * | Esc|    |  F7|  F8|  F9| F12||    |   7|   8|   9|   =|   -|
      * |-----------------------------||-----------------------------|
-     * |  L3|Alt |Home|PgUp|PgDn| End||   <|   4|   5|   6|   /|   *|
+     * |  L3| Alt|  F4|  F5|  F6| F11||    |   4|   5|   6|   +|   ~|
      * |-----------------------------||-----------------------------|
-     * |    |  F6|  F7|  F8|  F9| F10||   >|   1|   2|   3|   -|    |
+     * |    |    |  F1|  F2|  F3| F10||    |   1|   2|   3|    |    |
      * |-----------------------------||-----------------------------|
      * |    |    |    |    |    |    ||   0|    |    |    |    |    |
      * `-----------------------------'`-----------------------------'
      */
 	KEYMAP(
-		 ESC,   F1,   F2,   F3,   F4,   F5, FN22,    7,    8,    9, MINS, FN28,
-		 FN3, LALT, HOME, PGUP, PGDN,  END, NUBS,    4,    5,    6, FN16, FN29,
-		TRNS,   F6,   F7,   F8,   F9,  F10, FN30,    1,    2,    3, SLSH, TRNS,
+		 ESC, TRNS,   F2,   F3,   F9,  F12, TRNS,    7,    8,    9,  EQL, MINS,
+		 FN3, LALT,   F4,   F5,   F6,  F11, TRNS,    4,    5,    6, FN20, FN23,
+		TRNS, TRNS,   F1,   F2,   F3,  F10, TRNS,    1,    2,    3, SLSH, TRNS,
 		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,    0, TRNS, TRNS, TRNS, TRNS, TRNS
 		),
 	/* 3: function and media, Everyting else is blocked
@@ -112,27 +132,20 @@ const action_t PROGMEM fn_actions[] = {
 	[8] = ACTION_MODS_KEY(MOD_LCTL | MOD_LSFT, KC_TAB), // Ctrl+Shift+Tab
 
 	// Special Characters
-	[9]  = ACTION_MODS_KEY(MOD_LSFT, KC_1), // !	
+	[9]  = ACTION_MODS_KEY(MOD_LSFT, KC_1), // !
 	[10] = ACTION_MODS_KEY(MOD_LSFT, KC_2), // "
-	[11] = ACTION_MODS_KEY(MOD_RALT, KC_2), // @
-	[12] = ACTION_MODS_KEY(MOD_LSFT, KC_3), // #
-	[13] = ACTION_MODS_KEY(MOD_RALT, KC_4), // $
-	[14] = ACTION_MODS_KEY(MOD_LSFT, KC_5), // %
-	[15] = ACTION_MODS_KEY(MOD_LSFT, KC_6), // &	
-	[16] = ACTION_MODS_KEY(MOD_LSFT, KC_7), // /
-	[17] = ACTION_MODS_KEY(MOD_RALT, KC_7), // {
-	[18] = ACTION_MODS_KEY(MOD_LSFT, KC_8), // (
-	[19] = ACTION_MODS_KEY(MOD_RALT, KC_8), // [
-	[20] = ACTION_MODS_KEY(MOD_LSFT, KC_9), // )
-	[21] = ACTION_MODS_KEY(MOD_RALT, KC_9), // ]
-	[22] = ACTION_MODS_KEY(MOD_LSFT, KC_0), // =
-	[23] = ACTION_MODS_KEY(MOD_RALT, KC_0), // }
-	[24] = ACTION_MODS_KEY(MOD_LSFT, KC_MINS), // ?
-	[25] = ACTION_MODS_KEY(MOD_RALT, KC_MINS), // backslash
-	[26] = ACTION_MODS_KEY(MOD_LSFT, KC_EQL), // `
-	[27] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC), // ^
-	[28] = ACTION_MODS_KEY(MOD_RALT, KC_RBRC), // ~
-	[29] = ACTION_MODS_KEY(MOD_LSFT, KC_NUHS), // *
-	[30] = ACTION_MODS_KEY(MOD_LSFT, KC_NUBS), // >
-	[31] = ACTION_MODS_KEY(MOD_RALT, KC_NUBS), // |
+	[11] = ACTION_MODS_KEY(MOD_LSFT, KC_3), // £
+	[12] = ACTION_MODS_KEY(MOD_LSFT, KC_4), // $
+	[13] = ACTION_MODS_KEY(MOD_LSFT, KC_5), // %
+	[14] = ACTION_MODS_KEY(MOD_LSFT, KC_6), // ^
+	[15] = ACTION_MODS_KEY(MOD_LSFT, KC_7), // &
+	[16] = ACTION_MODS_KEY(MOD_LSFT, KC_8), // *
+	[17] = ACTION_MODS_KEY(MOD_LSFT, KC_9), // (
+	[18] = ACTION_MODS_KEY(MOD_LSFT, KC_0), // )
+	[19] = ACTION_MODS_KEY(MOD_LSFT, KC_MINS), // _
+	[20] = ACTION_MODS_KEY(MOD_LSFT, KC_EQL), // +
+	[21] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC), // }
+	[22] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC), // {
+	[23] = ACTION_MODS_KEY(MOD_LSFT, KC_NUHS), // ~
+	[24] = ACTION_MODS_KEY(MOD_LSFT, KC_NUBS), // |
 };
