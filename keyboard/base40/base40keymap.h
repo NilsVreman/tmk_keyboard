@@ -34,16 +34,16 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------||-----------------------------|
      * |L1  |   A|   S|   D|   F|   G||   H|   J|   K|   L|   ;|   '|
      * |-----------------------------||-----------------------------|
-     * |Shft|   Z|   X|   C|   V|   B||   N|   M|   ,|   .|   /| Ent|
+     * |Shft|   Z|   X|   C|   V|   B||   N|   M|   ,|   .|   /|Ctrl|
      * |-----------------------------||-----------------------------|
-     * |Ctrl| Alt| Win| Alt| Win|  L2|| Spc|Bspc| Del|  L1|  L2|  L3|
+     * |Ctrl| Alt| Win| Alt| Win|  L2|| Spc|Bspc| Ent|  L1|  L2|  L3|
      * `-----------------------------'`-----------------------------'
      */
 	KEYMAP(
 		 TAB,    Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P, LBRC,
 		 FN1,    A,    S,    D,    F,    G,    H,    J,    K,    L, SCLN, QUOT,
-		LSFT,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,  ENT,
-		LCTL, LALT, LGUI, LALT, LGUI,  FN2,  SPC, BSPC,  DEL,  FN1,  FN2,  FN3
+		LSFT,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH, RCTL,
+		LCTL, LALT, LGUI, LALT, LGUI,  FN2,  SPC, BSPC,  ENT,  FN1,  FN2,  FN3
 		),
 	/* 0.5: Flip Win and Alt
      * ,-----------------------------.,-----------------------------.
@@ -70,14 +70,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------||-----------------------------|
      * |    |    |    |    |    |    ||   [|   {|   }|   ]|   \|    |
      * |-----------------------------||-----------------------------|
-     * |    |    |    |    |    |  L3||    |    |    |    |    |    |
+     * |    |    |    |    |    |  L3||    |    | Del|    |    |    |
      * `-----------------------------'`-----------------------------'
      */
 	KEYMAP(
 		 GRV,  FN9, FN10, FN11, FN12, FN13, FN14, FN15, FN16, FN17, FN18, FN19,
 		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, LEFT, DOWN,   UP, RGHT, FN24, NUHS,
 		TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, LBRC, FN22, FN21, RBRC, NUBS, TRNS,
-		TRNS, TRNS, TRNS, TRNS, TRNS,  FN3, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS
+		TRNS, TRNS, TRNS, TRNS, TRNS,  FN3, TRNS, DEL, TRNS, TRNS, TRNS, TRNS
 		),
 	/* 2: numpad, f-keys and large scale movement
      * ,-----------------------------.,-----------------------------.
